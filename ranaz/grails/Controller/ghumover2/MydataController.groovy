@@ -465,25 +465,25 @@ class MydataController {
 							student.present_guardian="Father"
 							student.present_address =new Address(address: hssfRow.getCell(s_addr).getStringCellValue() , landmark: "" , place: "").save()
 							student.modeOfTransport=""//hssfRow.getCell(mod_trans).getStringCellValue();
-							
-							if(hssfRow.getCell((short)bld_group).getCellType() == 3){
+							println("^^^^^^^^^^for "+i+" if ^^^^^^^^^")
+							if(hssfRow.getCell((short)bld_group)==null){
 								student.bloodGroup="";
 							}else{
 									student.bloodGroup=hssfRow.getCell(bld_group).getStringCellValue(); }
 							
 							student.feeType = ""//hssfRow.getCell(fee_type).getStringCellValue();
 							
-							if(hssfRow.getCell((short)med_cond).getCellType() == 3){
+							if(hssfRow.getCell((short)med_cond)==null){
 								student.medicalCondition = "";
 							}else{
 								student.medicalCondition = hssfRow.getCell(med_cond).getStringCellValue()  }
 							
-							if(hssfRow.getCell((short)s_cat).getCellType() == 3){
+							if(hssfRow.getCell((short)s_cat)==null){
 								student.category = ""
 							}else{
 								student.category = hssfRow.getCell(s_cat).getStringCellValue();  }
 							
-							if(hssfRow.getCell((short)s_rel).getCellType() == 3){
+							if(hssfRow.getCell((short)s_rel)==null){
 								student.religion = ""
 							}else{
 							student.religion=hssfRow.getCell(s_rel).getStringCellValue();  }
@@ -572,24 +572,24 @@ class MydataController {
 							student.present_address =new Address(address: hssfRow.getCell(s_addr).getStringCellValue() , landmark: "" , place:"" ).save()
 							student.modeOfTransport=""//hssfRow.getCell(mod_trans).getStringCellValue();
 							
-							if(hssfRow.getCell((short)bld_group).getCellType() == 3){
+							if(hssfRow.getCell((short)bld_group)==null){
 								student.bloodGroup="";
 							}else{
 									student.bloodGroup=hssfRow.getCell(bld_group).getStringCellValue(); }
 							
 							student.feeType = ""//hssfRow.getCell(fee_type).getStringCellValue();
 							
-							if(hssfRow.getCell((short)med_cond).getCellType() == 3){
+							if(hssfRow.getCell((short)med_cond)==null){
 								student.medicalCondition = "";
 							}else{
 								student.medicalCondition = hssfRow.getCell(med_cond).getStringCellValue()  }
 							
-							if(hssfRow.getCell((short)s_cat).getCellType() == 3){
+							if(hssfRow.getCell((short)s_cat)==null){
 								student.category = ""
 							}else{
 								student.category = hssfRow.getCell(s_cat).getStringCellValue();  }
 							
-							if(hssfRow.getCell((short)s_rel).getCellType() == 3){
+							if(hssfRow.getCell((short)s_rel)==null){
 								student.religion = ""
 							}else{
 							student.religion=hssfRow.getCell(s_rel).getStringCellValue();  }
